@@ -1,0 +1,114 @@
+.profile{
+    display: flex;
+    width: 100%;
+ 
+    .profileContainer{
+        flex: 4;
+        margin: 2rem;
+        
+        .profileTop{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            h1{
+                font-size: 28px;
+                font-weight: 500;
+                color: #404040;
+            }
+
+            .profileNote{
+                display: flex;
+                gap: 1rem;
+
+                svg{
+                    height: 15px;
+                    width: 15px;
+                    color: #404040;
+                    display: flex;
+                    align-self: center;
+                }
+    
+                h2{
+                    font-size: 16px;
+                    color: #fb0404;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                }
+    
+            }
+        }
+
+        .profileDown{    
+            font-size: 10px;
+            color: #fefffe;
+            background-color: #074028;
+            padding: 10px 0 10px 5px;
+            border-radius: 3px;
+        }
+
+        .profileDownCont{
+            display: flex;
+            padding: 1rem 1rem 0 1rem;
+            gap: 15rem;
+            align-items: center;
+
+            .profileLeft{
+                display: flex;
+                gap: 6rem;
+
+                .profileIcon{
+                    svg{
+                        width: 50px;
+                        height: 50px;
+                        color: #404040;
+                        margin-left: 15px;
+                    }
+                    h2{
+                        font-size: 16px;
+                    }
+                }
+                .profileUseHead{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3rem;
+                    margin-top: 2rem;
+                    h1{
+                        font-size: 16px;
+                        color: #808080;
+                    }
+            }
+            }
+
+            .profileRight{
+                display: flex;
+                gap: 6rem;
+                .profileUseTail{
+                    display: flex;
+                    gap: 3rem;
+                    flex-direction: column;
+                    margin-top: 2rem;
+                    h1{
+                        font-size: 16px;
+                        color: #808080;
+                    }             
+                }
+                .userbtn{
+                    h1{
+                        font-size: 16px;
+                        color: #074028;
+                        cursor: pointer;
+                        background-color: transparent;
+                        border: 1px solid #074028;
+                        border-radius: 5px;
+                        padding: 5px;
+                    }
+                    :hover{
+                        background-color: #074028;
+                        color: #fefffe;
+                    }
+                }
+            }
+        }
+    }
+}

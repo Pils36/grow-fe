@@ -1,0 +1,12 @@
+.knowledge{
+    display: flex;
+    width: 100%;
+
+    .knowledgeSide{
+        flex: 1;
+    }
+    .knowledgeContainer{
+        flex: 4;
+        margin: 2rem;
+    }
+}

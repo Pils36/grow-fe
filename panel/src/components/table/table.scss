@@ -1,0 +1,45 @@
+.table{
+
+    margin-left: 0;
+    .cellWrapper{
+        display: flex;
+        align-items: center;
+
+        img{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+    }
+
+    .tableCellUse{
+        font-size: 14px;
+        color: #808080;
+    }
+
+    .tableCellNum{
+        font-size: 14px;
+        color: #808080;
+    }
+
+    .tableCellDat{
+        font-size: 14px;
+        color: #808080;
+    }
+
+    .tableCellCro{
+        font-size: 14px;
+        color: #808080;
+    }
+
+    .tableCellSta{
+        font-size: 14px;
+        color: #808080;
+    }
+
+    .tableCellStatus{
+        color: #198208;
+    }
+}

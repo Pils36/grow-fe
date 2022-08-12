@@ -1,0 +1,59 @@
+ .navbar{
+     display: flex;
+     align-items: center;
+     margin-left: 46rem;
+     color: #404040;
+
+     
+     .admin{
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+        margin-left: 3rem;
+        margin-bottom: 1.5rem;
+        padding-top: 20px;
+
+        .contNoti{ 
+            display: flex;
+            position: relative;
+        }
+
+        .noti{
+            font-size: 15px;
+        }
+
+        .counter{
+            width: 6px;
+            height: 6px;
+            background-color: red;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -1px;
+            right: -1px;
+        }
+
+        h2{
+            font-size: 13px;
+            font-weight: 400;
+        }
+     }
+
+
+         svg{
+             color: #404040;
+         }
+     }
+
+     input{
+         border: none;
+         outline: none;
+         background: transparent;
+
+         &::placeholder{
+             font-size: 12px;
+         }
+     }

@@ -1,0 +1,46 @@
+.users{
+    display: flex;
+    width: 100%;
+
+    .usersSide{
+        flex: 1;
+    }
+
+    .usersCOntainer{
+        flex: 4;
+        margin: 0rem 2rem;
+
+        .usersUp{
+            display: flex;
+            flex-direction: column;
+            .usersHead{
+                margin-top: 2rem;
+                h1{
+                    font-size: 28px;
+                    font-weight: 500;
+                    color: #404040;
+                }
+                p{
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #808080;
+                }
+            }
+            .search{
+                display: flex;
+                width: 13rem;
+                margin-bottom: 2rem;
+                position: relative;
+                left: 45rem;
+                align-items: center;
+                border: 1px solid #e7e5e5;
+                border-radius: 5px;
+                padding: 5px 3px 5px 3px;
+       
+                .searchN{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

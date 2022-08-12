@@ -1,0 +1,117 @@
+.single{
+    display: flex;
+    width: 100%;
+
+    .singleBar{
+        flex: 1;
+        border-right: 1.5px solid #e7e5e5; 
+        min-height: 100vh;
+        background-color: white;
+        padding-top: 40px;
+
+        .top{
+            height: 50px;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            padding: 20px 0 50px 0; 
+    
+            .logo{
+                font-size: 10px; 
+            }
+        }
+
+        .center{
+            padding-left: 6.5rem;
+            padding-top: 0;
+            margin-top: 0;
+    
+            ul{
+                list-style: none;
+                margin: 0 0 70px 0;
+                padding: 0 0 70px 0;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+    
+                li{
+                    cursor: pointer;
+                    color: #636363;
+                    margin-right: 5px;
+                    padding: 6px 0 6px 0;
+    
+                    &:hover{
+                        background-color: #cfcdcd;
+                        color: black;
+                        border-radius: 3px;
+                    }
+    
+                    span{
+                        font-size: 15px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+
+    .singleContainer{
+        flex: 4;
+ 
+        .basicInfo{
+            padding-left: 30px;
+            padding-right: 60px;
+
+            h1{
+                font-size: 22px;
+                font-weight: 400;
+                color: #404040;
+            }
+
+            p{
+                font-size: 14px;
+                font-weight: 500;
+                color: #808080;
+            }
+
+            h3{
+                font-size: 10px;
+                color: #fefffe;
+                background-color: #074028;
+                padding: 5px 0 5px 5px;
+                border-radius: 2px;
+            }
+        }
+
+        .infoDetail{
+            display: flex;
+            padding-left: 50px;
+            gap: 11rem;
+            line-height: 24px;
+
+            .right{
+                display: flex;
+                flex-direction: column;
+                gap: .8rem;
+
+                h1{
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: #808080;
+                }
+            }
+
+            .left{
+                display: flex;
+                flex-direction: column;
+                gap: .8rem;
+
+                p{
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: #808080;
+                }
+            }
+        }
+    }
+}

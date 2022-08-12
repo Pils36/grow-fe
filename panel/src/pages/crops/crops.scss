@@ -1,0 +1,12 @@
+.crop{
+    display: flex;
+    width: 100%;
+    .cropSide{
+        flex: 1;
+    }
+
+    .cropContainer{
+        flex: 4;
+    }
+    
+}

@@ -1,0 +1,168 @@
+.addCrops{
+    display: flex;
+    width: 100%;
+
+
+    .addcropsbar{
+        flex: 1;
+    }
+
+    .addcropscontainer{
+        flex: 4;
+        margin: 2rem 4rem 2rem 1rem;
+
+        .addcropshead{
+            display: flex;
+            justify-content: space-between;
+            .addcropsleft{
+                h1{
+                    font-size: 26px;
+                    font-weight: 500;
+                    color: #404040;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #808080;
+                }
+            }
+            .addcropsright{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: .5rem;
+                .noti{
+                    height: 15px;
+                    width: 15px;
+                    margin-right: .8rem;
+                }
+
+                h2{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #404040;
+                }
+
+                svg{
+                    width: 30px;
+                    height: 30px;
+                    color: #404040;
+                }
+            }
+        }
+
+        .addcropsbottom{
+            margin-top: 3rem;
+            .input{
+                display: flex;
+                flex-direction: column;
+                label{
+                    font-size: 11px;
+                    font-weight: 500;
+                    color: #074028;
+                    padding-left: .5rem;
+                    position: relative;
+                    top: -1.0rem;
+                }
+
+                .inputy{
+                    background-color: transparent;
+                    border: 1px solid #404040;
+                    padding: 8px 10px;
+                    border-radius: 5px;
+                    font-size: 10px;
+                    font-weight: 400;
+                    outline: none;
+                    position: absolute;
+                }
+            }
+            .thumbnail{
+                margin-top: 3rem;
+                h1{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #404040;
+                }
+
+                .thumnailImage{
+                    width: 250px;
+                    height: 150px;
+                    border: 1px solid #808080;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 10px 0;
+                    img{
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        object-fit: contain;
+                    }
+                    h1{
+                        font-size: 14px;
+                        margin-top: 12px;
+                        display: flex;
+                        padding: 2px 5px;
+                        align-items: center;
+                        color: #000;
+                        background-color: rgba(200, 196, 196, 0.25);
+                    }
+                }
+                button{
+                    background-color: transparent;
+                    border: 1px solid #074028;
+                    color: #074028;
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding: 2px 10px;
+                    border-radius: 5px;
+                    margin-top: 5px;
+                    &:hover{
+                        background-color: #074028;
+                        color: #fff;
+                        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .btnsb{
+                display: flex;
+                justify-content: center;
+                margin-top: 5rem;
+                gap: 3rem;
+
+                .cans{
+                    background-color: transparent;
+                    color: #074028;
+                    border: 1px solid #074028;
+                    border-radius: 5px;
+                    padding: 2px 30px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    &:hover{
+                        background-color: #074028;
+                        color: #fff;
+                    }
+                }
+
+                .save{
+                    background-color: #074028;
+                    color: #fff;
+                    border: 1px solid #074028;
+                    border-radius: 5px;
+                    padding: 2px 30px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    &:hover{
+                        background-color: #fff;
+                        color: #074028;
+                    }
+                }
+            }
+        }
+    }
+}
