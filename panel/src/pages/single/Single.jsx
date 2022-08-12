@@ -9,7 +9,8 @@ import DeleteModal from "../../components/DeleteModal"
 
 const Single = () => { 
   const [deleteModal, setDeleteModal] = useState(false)
-  const [data, setData] = useState ()
+  const [data, setData] = useState ([])
+  const [status, setStatus] = useState (false)
   const urlParams = new URLSearchParams(window.location.search)
   const userId = urlParams.get('id')
 
@@ -27,8 +28,9 @@ useEffect (() => {
   const fetchUsers = async () => {
     try{
   const res = await axios (requestOptions)
-    console.log(res.data)
+
     setData(res.data.data)
+      setStatus(true);
     }catch(err){
     console.log(err);
   }
@@ -74,19 +76,21 @@ useEffect (() => {
             <h1>Crop</h1>
             <h1>Account Password</h1>
           </div>
-          {JSON.stringify(data._id)}
-           <div className="left">
+          {
+            status ? <div className="left" key={data._id}>
+
+              <p>{ data.fullName }</p>
+              <p>{ data.email }</p>
+              <p>{ data.phoneNumber }</p>
+              <p>{data.cityState }</p>
+              <p className="status">{ data.status }</p>
+              <p>{ data.created_at }</p>
+              <p>1</p>
+              <p>Maize</p>
+              <p>ewfsgddhSE#</p>
+            </div> : 'Loading...'
+          }
            
-             <p>{JSON.stringify(data.fullName)}</p>
-            <p>{JSON.stringify(data.email)}</p>
-            <p>{JSON.stringify(data.phoneNumber)}</p>
-            <p>{JSON.stringify(data.cityState)}</p>
-            <p className="status">Active</p>
-            <p>{JSON.stringify(data.created_at)}</p>
-            <p>1</p>
-            <p>Maize</p>
-            <p>ewfsgddhSE#</p>
-          </div> 
   
         </div>
         {deleteModal && <DeleteModal closeModal={setDeleteModal} />}
