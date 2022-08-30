@@ -8,7 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper'; 
 import { Link } from "react-router-dom";
 
-const List = ({data}) => { 
+const List = ({data}) => {  
 
   return (
     <TableContainer component={Paper} className="table">

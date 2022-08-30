@@ -23,10 +23,10 @@ const Single = () => {
         "Authorization": "Bearer " + localStorage.token
     },
 }
-
+ 
 useEffect (() => {
   const fetchUsers = async () => {
-    try{
+    try{ 
   const res = await axios (requestOptions)
 
     setData(res.data.data)
@@ -47,9 +47,9 @@ useEffect (() => {
  
         <div className="center"> 
                 <ul>
-                    <Link to='/users/personalinfo'><li><span>Personal Information</span></li></Link>
-                    <Link to="/users/activity"><li><span>Account Activity</span></li></Link>
-                    <Link to="/users/analytics"><li><span>Analytics</span></li></Link>
+                    <Link to={`/users/personalinfo?id=`+userId}><li><span>Personal Information</span></li></Link>
+                    <Link to={`/users/activity?id=`+userId}><li><span>Account Activity</span></li></Link>
+                    <Link to={`/users/analytics?id=`+userId}><li><span>Analytics</span></li></Link>
                 </ul>
 
                 <UserButton onClick={() => {setDeleteModal(true)}} />

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 
 const Crops = () => {  
-  return (  
+  return (   
     <div className="crop">
       <div className="cropSide"><Sidebar /></div>
       <div className="cropContainer">

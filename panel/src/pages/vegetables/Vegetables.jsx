@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom'
 
 const Vegetables = () => {
   return (
-    <div className="list">
+    <div className="crop">
       <Sidebar />
-      <div className="listContainer">
+      <div className="cropContainer">
         <Navbar />
-        <h1>Crops</h1>
-        <p className="text-gray-900">Contains all crops on your database</p>
+        <h1 className='text-gray-600 px-6'>Crops</h1>
+        <p className="text-gray-600 px-6">Contains all crops on your database</p>
         <div>
             <ul className="flex gap-3 ml-6 pt-5">
             <Link to="/crops"><li className="hover:border-b-2 cursor-pointer border-gray-600">All crops (7)</li></Link>

@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom'
 
 const Tubers = () => {
   return (
-    <div className="list">
+    <div className="crop">
       <Sidebar />
-      <div className="listContainer">
+      <div className="cropContainer">
         <Navbar />
-        <h1>Crops</h1>
-        <p className="text-gray-900">Contains all crops on your database</p>
+        <h1 className='text-gray-600 px-6'>Crops</h1>
+        <p className="text-gray-600 px-6">Contains all crops on your database</p>
         <div>
             <ul className="flex gap-3 ml-6 pt-5">
             <Link to="/crops"><li className="hover:border-b-2 cursor-pointer border-gray-600">All crops (7)</li></Link>
@@ -26,7 +26,7 @@ const Tubers = () => {
             <div class="w-52 h-60 rounded ml-8 overflow-hidden shadow-lg">
                 <img className="w-full h-36" src="https://images.unsplash.com/photo-1530464684439-723262c0d16e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNyb3BzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="" />
                 <div class="px-2 py-4">
-                    <div class="font-bold text-xl font-light mb-1">Grains</div>
+                    <div class="font-bold text-xl mb-1">Grains</div>
                 </div>
                 <div class="px-2 pb-2 flex justify-between">
                     <span class="text-sm font-semibold text-gray-700 mr-2 mb-2">Edit content</span>
