@@ -7,30 +7,30 @@ import { Link } from "react-router-dom"
 import axios from "axios"
  
 const Activity = () => { 
-    const [data, setData] = useState ()
+    const [myData, setMyData] = useState ()
     const [status, setStatus] = useState (false)
     const urlParams = new URLSearchParams(window.location.search)
     const userId = urlParams.get('id')
 
     
 
-    const requestOptions = {
-        method: "GET",
-        url: "https://api-v1-staging.growng.company/api/v1/admin/user/activity/" + userId,
-        headers:{
-            "Content-Type": "application/json",
-            "Authorization": "Bearer " + localStorage.token
-        },
-    }
+
 
      
     useEffect (() => {
       const fetchUsers = async () => {
         try{ 
+          const requestOptions = {
+            method: "GET",
+            url: "https://api-v1-staging.growng.company/api/v1/admin/user/activity/" + userId,
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": "Bearer " + localStorage.token
+            }
+          }
       const res = await axios (requestOptions)
-      console.log(res)
-    
-        setData(res.data.data)
+          setMyData(res.data.data);
+
           setStatus(true);
         }catch(err){
         console.log(err);
@@ -62,21 +62,29 @@ const Activity = () => {
                 <p>Contains all user activities on Grow app</p>
                 <h4>Activities</h4>
             </div>
-            {/* {JSON.parse(JSON.stringify(data.history))} */}
-         {/* {data.history.map((histories, key) => (
-            <div key={key} className="activityInfo">
+
+        { 
+          status ? 
+            myData.history.map((histories, key) => (
+              <div key={key} className="activityInfo">
                 <div className="activityInfoF">
-                    <div className="left">
-                        <h2>{histories.userId}</h2>
-                        <p>{histories.information}</p>
-                    </div>
-                    <div className="right">
-                        <h3>{histories.created_at}</h3>
-                        <p>{histories.updated_at}</p>
-                    </div>
+                  <div className="left">
+                    <h2>{histories.userId}</h2>
+                  </div>
+                  <div>
+                    <p>{histories.information}</p>
+                  </div>
+                  <div className="right">
+                    <h3>{new Date(histories.created_at).toDateString()}</h3>
+                    <p>{new Date(histories.updated_at).toDateString()}</p>
+                  </div>
                 </div>
-            </div>
-        ))}  */}
+              </div>
+            ))
+           : <p>Loading..</p>
+        }
+
+        
         </div>
    </div>
   )
