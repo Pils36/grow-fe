@@ -19,8 +19,8 @@ const Knowledge = () => {
                     <div class="font-bold text-xl mb-1">Grains</div>
                 </div>
                 <div class="px-2 pb-2 flex justify-between">
-                    <span class="text-sm font-semibold text-gray-700 mr-2 mb-2">Edit content</span>
-                    <span class="text-sm font-semibold text-red-500 mr-2 mb-2">Delete</span>
+                    <span class="text-sm font-semibold text-gray-700 mr-2 mb-2 cursor-pointer">Edit content</span>
+                    <span class="text-sm font-semibold text-red-500 mr-2 mb-2 cursor-pointer">Delete</span>
                 </div>
             </div>
 

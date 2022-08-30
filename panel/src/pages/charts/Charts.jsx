@@ -6,6 +6,8 @@ import { Link } from "react-router-dom"
 
 
 const Charts = () => {
+    const urlParams = new URLSearchParams(window.location.search)
+    const userId = urlParams.get('id')
   return (
     <div className="chart">
     <div className="chartBa">
@@ -13,11 +15,11 @@ const Charts = () => {
            <img className="logo" src={ logo } alt="Logo" />
        </div>
 
-       <div className="center"> 
+       <div className="center">  
                <ul>
-                   <Link to='/users/personalinfo'><li><span>Personal Information</span></li></Link>
-                   <Link to="/users/activity"><li><span>Account Activity</span></li></Link>
-                   <Link to="/users/analytics"><li><span>Analytics</span></li></Link>
+                    <Link to={`/users/personalinfo?id=`+userId}><li><span>Personal Information</span></li></Link>
+                    <Link to={`/users/activity?id=`+userId}><li><span>Account Activity</span></li></Link>
+                    <Link to={`/users/analytics?id=`+userId}><li><span>Analytics</span></li></Link>
                </ul>
 
                <UserButton />
