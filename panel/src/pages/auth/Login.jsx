@@ -5,7 +5,7 @@ import axios from "axios"
 
 
 const Login = () => {
-
+ 
   const [username, setUsername] = useState ("")
   const [password, setPassword] = useState ("")
 
@@ -25,7 +25,7 @@ const Login = () => {
         headers:{
           "Content-Type": "application/json",
         },
-        body:JSON.stringify(item)
+        body:JSON.stringify(item) 
       })
       result = await result.json()
       localStorage.setItem("token", result.token);

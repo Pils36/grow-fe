@@ -22,6 +22,7 @@ import Home from "./pages/home/Home";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import DeleteModal from "./components/DeleteModal";
+import Notification from "./components/notification/Notification";
 
 
 
@@ -39,6 +40,7 @@ function App() {
         <Route element={<ProtectedRoutes />}>
           <Route path="/">
           <Route path="/*" element={ <Dashboard /> }/>
+            <Route path="notification" element={ <Notification /> }/>
             <Route path="knowledge" element={ <Knowledge /> }/>
             <Route path="crops" element={ <Crops /> }/>
             <Route path="users" element={ <Users /> }/>
@@ -62,7 +64,7 @@ function App() {
           <Route path="addcrops" element={ <Addcrops/> } />
         </Route>
         <Route path="knowledge">
-          <Route path="cropcontents" element={ <Cropscont /> }/>
+          <Route path="create" element={ <Cropscont /> }/>
         </Route>
 
           <Route path="new" element={ <New /> }/>

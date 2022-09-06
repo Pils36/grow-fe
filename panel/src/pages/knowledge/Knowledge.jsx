@@ -10,7 +10,7 @@ const Knowledge = () => {
       <div className="knowledgeContainer">
         <Navbar />
         <h1>Knowledge Hub</h1>
-        <Link to='cropcontents'><button className="bg-transparent border-2 border-green-800 px-6 py-2 rounded-md text-green-800 font-bold text-sm ml-5 my-10">Add new crop</button></Link>
+        <Link to='create'><button className="bg-transparent border-2 border-green-800 px-6 py-2 rounded-md text-green-800 font-bold text-sm ml-5 my-10">Add new crop</button></Link>
 
         <div className="flex gap-3">
             <div class="w-52 h-60 rounded ml-6 overflow-hidden shadow-lg">

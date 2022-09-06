@@ -29,7 +29,7 @@ useEffect (() => {
     try{ 
   const res = await axios (requestOptions)
 
-    setData(res.data.data)
+    setData(res.data.data) 
       setStatus(true);
     }catch(err){
     console.log(err);
