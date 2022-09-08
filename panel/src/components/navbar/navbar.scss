@@ -16,6 +16,7 @@
         .contNoti{ 
             display: flex;
             position: relative;
+            cursor: pointer;
         }
 
         .noti{
@@ -24,7 +25,7 @@
 
         .counter{
             width: 6px;
-            height: 6px;
+            height: 6px; 
             background-color: red;
             border-radius: 50%;
             color: white;
@@ -32,7 +33,7 @@
             justify-content: center;
             align-items: center;
             position: absolute;
-            top: -1px;
+            top: 5px;
             right: -1px;
         }
 

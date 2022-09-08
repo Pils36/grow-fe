@@ -5,7 +5,7 @@ import Logo from '../../components/images/Ellipse.png'
 
 
 const Home = () => {
-  return (
+  return ( 
     <div className='mx-11'>
         <div className='flex justify-between'>
             <img src={Logo} alt=""  className='w-20 h-9 mt-9 flex items-center'/>
@@ -24,7 +24,7 @@ const Home = () => {
               </div>
               <div className='w-[50%]'>
                 <img className='mt-16' src={Garden} alt=''></img>
-              </div>
+              </div> 
           </div>
     </div>    
   )

@@ -9,7 +9,6 @@ import Paper from '@mui/material/Paper';
 import { Link } from "react-router-dom";
 
 const List = ({data}) => {  
-
   return (
     <TableContainer component={Paper} className="table">
       <Table sx={{ minWidth: 500 }} aria-label="simple table">
@@ -18,7 +17,8 @@ const List = ({data}) => {
             <TableCell className="tableCellUse">User</TableCell>
             <TableCell className="tableCellNum">Phone Number</TableCell>
             <TableCell className="tableCellDat">Email</TableCell>
-            <TableCell className="tableCellCro">Crops</TableCell>
+            <TableCell className="tableCellCro">Business Name</TableCell>
+            <TableCell className="tableCellCro">Date created</TableCell>
             <TableCell className="tableCellSta">Status</TableCell>
           </TableRow>
         </TableHead>
@@ -33,7 +33,8 @@ const List = ({data}) => {
               </TableCell>
               <TableCell className="tableCell">{item.phoneNumber}</TableCell>
               <TableCell className="tableCell">{item.email}</TableCell>
-              <TableCell className="tableCell">{item.crops}</TableCell>
+              <TableCell className="tableCell">{item.businessName}</TableCell>
+              <TableCell className="tableCell">{new Date(item.created_at).toLocaleString()}</TableCell>
               <TableCell className="tableCellStatus">{item.status}</TableCell>
             </TableRow>
           ))}

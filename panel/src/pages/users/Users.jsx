@@ -7,6 +7,7 @@ import { Users } from '../../Users'
 import Table from "../../components/table/Table"
 import { keys } from '@mui/system';
 import axios from 'axios';
+import baseurl from '../../constants/baseurl';
 
 const Userss = () => {
 
@@ -15,7 +16,7 @@ const Userss = () => {
 
 
     const [data, setData] = useState([])
-
+ 
     const search = (data)=>{
         return data.filter((item) =>
             keys.some(key=>item[key].toLowerCase().includes(query))
@@ -24,7 +25,7 @@ const Userss = () => {
 
     const requestOptions = {
         method: "GET",
-        url: "https://api-v1-staging.growng.company/api/v1/admin/user",
+        url: `${baseurl()}/user`,
         headers:{
             "Content-Type": "application/json",
             "Authorization": "Bearer " + localStorage.token

@@ -5,6 +5,7 @@ import Navbar from "../../components/navbar/Navbar"
 import UserButton from "../../components/userbutton/UserButton"
 import { Link } from "react-router-dom"
 import axios from "axios"
+import baseurl from '../../constants/baseurl';
  
 const Activity = () => { 
     const [myData, setMyData] = useState ()
@@ -22,7 +23,7 @@ const Activity = () => {
         try{ 
           const requestOptions = {
             method: "GET",
-            url: "https://api-v1-staging.growng.company/api/v1/admin/user/activity/" + userId,
+            url: `${baseurl()}/user/activity/${userId}`,
             headers: {
               "Content-Type": "application/json",
               "Authorization": "Bearer " + localStorage.token
