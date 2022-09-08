@@ -1,6 +1,7 @@
 {
   "name": "panel",
   "version": "0.1.0",
+  "homepage": "https://admin.growng.company",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
