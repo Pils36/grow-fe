@@ -131,7 +131,7 @@ const Cropscont = () => {
                 </div>
 
                 <div className='btnsb'>
-                    <button className='cans'>Cancel</button>
+                    <button className='cans' onClick={() => navigate('/knowledge')}>Cancel</button>
                     <button className='save' onClick={submit}>Save</button>
                 </div>
             </div>

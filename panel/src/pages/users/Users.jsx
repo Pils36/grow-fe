@@ -35,7 +35,6 @@ const Userss = () => {
     useEffect (() => {
         const fetchUsers = async () => {
             const res = await axios (requestOptions)
-            console.log(res.data.data)
             setData(res.data.data)
         }
         fetchUsers()

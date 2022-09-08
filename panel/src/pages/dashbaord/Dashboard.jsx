@@ -19,6 +19,7 @@ const Dashboard = () => {
     const [data, setData] = useState();
     const [userData, setUserData] = useState();
     const [status, setStatus] = useState(false)
+    const [statusData, setStatusData] = useState(false)
 
     const requestOptions = {
         method: "GET",
@@ -56,7 +57,7 @@ const Dashboard = () => {
                 const result = await axios(config);
 
                 setUserData(result.data.data);
-                setStatus(true);
+                setStatusData(true);
                 
             } catch (err) {
                 console.log(err);
@@ -113,12 +114,11 @@ const Dashboard = () => {
                         </div> : 'loading...'
                     }
                 </div>
-                {status ?
+                {statusData ?
                 <>
                         <div className="homeTableHead">
                             <h1>User list</h1>
-                            <p>You have a total of {userData.length} users</p> : <p>Loading...</p>
-
+                            <p>You have a total of {userData.length} users</p>
                         </div>
 
                         <Table data={search(userData)} />

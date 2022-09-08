@@ -59,14 +59,14 @@ const Knowledge = () => {
 
                             (knowledgeData.length > 0 ?
                                 knowledgeData.map((item, key) => {
-                                    return <div class="w-52 h-60 rounded ml-6 overflow-hidden shadow-lg" key={key}>
+                                    return <div className="w-52 h-60 rounded ml-6 overflow-hidden shadow-lg" key={key}>
                                         <img className="w-full h-36" src={item.cropFile !== "" ? item.cropFile : "https://images.unsplash.com/photo-1530464684439-723262c0d16e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNyb3BzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"} alt="" />
-                                        <div class="px-2 py-4">
-                                            <div class="font-bold text-xl mb-1">{item.crop}</div>
+                                        <div className="px-2 py-4">
+                                            <div className="font-bold text-xl mb-1">{item.crop}</div>
                                         </div>
-                                        <div class="px-2 pb-2 flex justify-between">
-                                            <Link to={`knowledge/view/${item._id}`}><span class="text-sm font-semibold text-gray-700 mr-2 mb-2 cursor-pointer">Edit content</span></Link>
-                                            <span class="text-sm font-semibold text-red-500 mr-2 mb-2 cursor-pointer" onClick={() => deleteCrop(item._id)}>Delete</span>
+                                        <div className="px-2 pb-2 flex justify-between">
+                                            <Link to={`knowledge/view/${item._id}`}><span className="text-sm font-semibold text-gray-700 mr-2 mb-2 cursor-pointer">Edit content</span></Link>
+                                            <span className="text-sm font-semibold text-red-500 mr-2 mb-2 cursor-pointer" onClick={() => deleteCrop(item._id)}>Delete</span>
                                         </div>
                                     </div>
                                 })
