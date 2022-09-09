@@ -36,11 +36,27 @@ const Knowledge = () => {
         }
 
         getKnowledgeData();
-    }, []);
+    }, [knowledgeData]);
 
 
-    const deleteCrop = async (id) => {
-        alert(id);
+    const deleteKnowledge = async (id) => {
+        try {
+
+            const requestOptions = {
+                method: "DELETE",
+                url: `${baseurl()}/knowledge/delete/${id}`,
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + localStorage.token
+                }
+            }
+
+            await axios(requestOptions);
+
+            alert('Successfully deleted');
+        } catch (error) {
+            console.log(error);
+        }
     }
 
 
@@ -65,8 +81,8 @@ const Knowledge = () => {
                                             <div className="font-bold text-xl mb-1">{item.crop}</div>
                                         </div>
                                         <div className="px-2 pb-2 flex justify-between">
-                                            <Link to={`knowledge/view/${item._id}`}><span className="text-sm font-semibold text-gray-700 mr-2 mb-2 cursor-pointer">Edit content</span></Link>
-                                            <span className="text-sm font-semibold text-red-500 mr-2 mb-2 cursor-pointer" onClick={() => deleteCrop(item._id)}>Delete</span>
+                                            <Link to={`/knowledge/view/${item._id}`}><span className="text-sm font-semibold text-gray-700 mr-2 mb-2 cursor-pointer">Edit content</span></Link>
+                                            <span className="text-sm font-semibold text-red-500 mr-2 mb-2 cursor-pointer" onClick={() => deleteKnowledge(item._id)}>Delete</span>
                                         </div>
                                     </div>
                                 })

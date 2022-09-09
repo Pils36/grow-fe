@@ -3,9 +3,7 @@ import Navbar from '../../components/navbar/Navbar'
 import Sidebar from '../../components/sidebar/Sidebar'
 import PersonSearchOutlinedIcon from '@mui/icons-material/PersonSearchOutlined';
 import "./users.scss"
-import { Users } from '../../Users'
 import Table from "../../components/table/Table"
-import { keys } from '@mui/system';
 import axios from 'axios';
 import baseurl from '../../constants/baseurl';
 

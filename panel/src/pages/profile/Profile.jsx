@@ -2,6 +2,7 @@ import "./profile.scss"
 import Sidebar from '../../components/sidebar/Sidebar'
 import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import auth from '../../constants/auth'
 
 const Profile = () => {
   return ( 
@@ -35,8 +36,8 @@ const Profile = () => {
 
             <div className="profileRight">
                 <div className="profileUseTail">
-                    <h1>Clement Olawuyi</h1>
-                    <h1>namesurname@gmail.com</h1>
+                    <h1>{auth().fullname}</h1>
+                          <h1>{auth().email}</h1>
                     <h1>************</h1>
                 </div>
                 <div className="userbtn">
