@@ -141,9 +141,9 @@
                         width: 80px;
                         height: 80px;
                         border-radius: 50%;
-                        object-fit: contain;
+                        object-fit: contain; 
                     }
-                    h1{
+                    input{
                         font-size: 14px;
                         margin-top: 12px;
                         display: flex;
@@ -151,6 +151,7 @@
                         align-items: center;
                         color: #000;
                         background-color: rgba(200, 196, 196, 0.25);
+                        cursor: pointer;
                     }
                 }
                 button{
@@ -193,7 +194,7 @@
                 }
 
                 .save{
-                    background-color: #074028;
+                    background-color: #074028; 
                     color: #fff;
                     border: 1px solid #074028;
                     border-radius: 5px;

@@ -1,0 +1,39 @@
+.admin{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.input_up{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    .input_name{
+        border: 2px black solid;
+        padding: .8rem 1rem;
+    }
+}
+
+.email{
+    width: 100%;
+    border: 2px black solid;
+    padding: 1rem;
+}
+
+.roles_perm{
+    display: flex;
+    gap: 2rem;
+    .roles_head{
+        font-size: 16px;
+        font-weight: 700;
+        color: #404040;
+        padding-left: 1rem;
+    }
+
+    .perms_line{
+        margin-top: .8rem;
+        height: 1px;
+        width: 350px;
+        background-color: #404040;
+    }
+}
+ 

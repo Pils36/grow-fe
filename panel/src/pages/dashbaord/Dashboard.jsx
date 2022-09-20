@@ -8,6 +8,7 @@ import Table from "../../components/table/Table"
 import { Link } from "react-router-dom";
 import axios from "axios";
 import baseurl from '../../constants/baseurl';
+import Lines from "../../components/charts/Lines";
 
 const Dashboard = () => {
 
@@ -26,7 +27,7 @@ const Dashboard = () => {
         url: `${baseurl()}/menu`,
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer " + localStorage.token
+            "Authorization": "Bearer " + localStorage.token 
         }
     }
 
@@ -57,7 +58,7 @@ const Dashboard = () => {
                 const result = await axios(config);
 
                 setUserData(result.data.data);
-                setStatusData(true);
+                setStatusData(true); 
                 
             } catch (err) {
                 console.log(err);
@@ -74,19 +75,23 @@ const Dashboard = () => {
 
 
             <div className="homeCOntainer">
-                <div className="homeUp">
+                {/* <div className="homeUp">
                     <Link to="/"><h1>Logout</h1></Link>
                     <Navbar />
                     <div className="search">
                         <input type="text" placeholder="Search by name" onChange={e => setQuery(e.target.value)} />
                         <PersonSearchOutlinedIcon className="searchN" />
                     </div>
+                </div> */}
+                <div className="home_up">
+                    <h1 className="dash">Dashboard</h1>
+                    <Navbar />
                 </div>
 
                 <div className="homeDisplay">
-                    <h1>Dashboard</h1>
+                    {/* <h1>Dashboard</h1> */}
                     {status ?
-                        <div key={data.user} className="homeDispalyDown">
+                        <div key={data.user} className="homeDispalyDown"> 
                             <div className="one">
                                 <h1>Total Users</h1>
                                 <h2>{data.user}</h2>
@@ -111,10 +116,15 @@ const Dashboard = () => {
                                     <p>Vegetable <span>:1</span></p>
                                 </div>
                             </div>
-                        </div> : 'loading...'
+
+                            <div className="three">
+                                <h1>Total no of calls made</h1>
+                                <h2 className="api">250</h2>
+                            </div>
+                        </div> : 'loading...' 
                     }
                 </div>
-                {statusData ?
+                {/* {statusData ?
                 <>
                         <div className="homeTableHead">
                             <h1>User list</h1>
@@ -124,7 +134,9 @@ const Dashboard = () => {
                         <Table data={search(userData)} />
                 </>
                 : <p>Loading...</p>
-                }
+                } */}
+
+                <Lines />
             </div>
         </div>
     )
