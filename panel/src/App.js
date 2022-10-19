@@ -23,6 +23,11 @@ import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import DeleteModal from "./components/DeleteModal";
 import Notification from "./components/notification/Notification";
+import Details from "./pages/details/Details";
+import Permission from "./pages/permission/Permission";
+import Editadmin from "./pages/adminedit/Editadmin";
+import Apicalls from "./pages/apicalls/Apicalls";
+import Contentdetails from "./pages/contentdetails/Contentdetails";
 
 
 
@@ -33,7 +38,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<Signup/>} />
+        <Route path='/signup' element={<Signup/>} /> 
 
 
 
@@ -45,6 +50,7 @@ function App() {
             <Route path="crops" element={ <Crops /> }/>
             <Route path="users" element={ <Users /> }/>
             <Route path="profile" element={ <Profile /> } />
+            <Route path="apicalls" element={ <Apicalls /> } />
           </Route>
           <Route path="users">
             <Route path="personalinfo" element={ <Single /> }/>
@@ -80,10 +86,14 @@ function App() {
           <Route path="grains" element={ <Grains/> }></Route>
         </Route>
         <Route path="products">
-          
-          <Route path="new" element={ <New /> }/>
           <Route path="delete" element = { <DeleteModal /> } />
         </Route>
+
+        <Route path="/newadmin" element={ <New /> }/>
+        <Route path="/details" element={ <Details /> } />
+        <Route path="/permission" element={ <Permission /> } />
+        <Route path="/adminedit" element={ <Editadmin /> } />
+        <Route path="/contentdetails" element={ <Contentdetails /> } />
       </Routes>
   </BrowserRouter>
     </div>

@@ -16,20 +16,20 @@ const Navbar = () => {
                         <Link to={'/notification'}><NotificationsActiveOutlinedIcon className="noti" /></Link>
                         <div className="counter"></div>
                     </div>
-                    <h2>{loggedIn().fullname} <br /> ({loggedIn().accountType}) </h2>
+                    <h2 className="name">{loggedIn().fullname} <br /> ({loggedIn().accountType}) </h2>
                     <AccountCircleOutlinedIcon />
-                </div>
+                </div> 
 
                 
 
                 <div className="items">
                     <div className="item">
-
+                
                     </div>
                 </div>
             </div>           
         </div>
-    )
+    ) 
 }
  
 export default Navbar

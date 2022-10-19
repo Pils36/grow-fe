@@ -1,7 +1,7 @@
  .navbar{
      display: flex;
      align-items: center;
-     margin-left: 46rem;
+     justify-content: space-between;
      color: #404040;
 
      
@@ -10,13 +10,18 @@
         align-items: center;
         gap: .8rem;
         margin-left: 3rem;
+        margin-right: 2rem;
         margin-bottom: 1.5rem;
-        padding-top: 20px;
+
+        .name{
+            font-size: 16px;
+            font-weight: 400;
+        }
 
         .contNoti{ 
             display: flex;
             position: relative;
-            cursor: pointer;
+            cursor: pointer; 
         }
 
         .noti{

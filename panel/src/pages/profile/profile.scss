@@ -4,16 +4,17 @@
  
     .profileContainer{
         flex: 4;
-        margin: 2rem;
+        margin: 0 2rem;
         
         .profileTop{
             display: flex;
             justify-content: space-between;
-            margin-bottom: 2rem;
+            margin-bottom: .8rem;
             h1{
                 font-size: 28px;
                 font-weight: 500;
                 color: #404040;
+                margin-top: 5rem;
             }
 
             .profileNote{
@@ -30,7 +31,7 @@
     
                 h2{
                     font-size: 16px;
-                    color: #fb0404;
+                    color: #fb0404; 
                     display: flex;
                     align-items: center;
                     cursor: pointer;
@@ -40,8 +41,6 @@
         }
 
         .profileDown{    
-            font-size: 10px;
-            color: #fefffe;
             background-color: #074028;
             padding: 10px 0 10px 5px;
             border-radius: 3px;
@@ -53,62 +52,145 @@
             gap: 15rem;
             align-items: center;
 
-            .profileLeft{
+            .profileLeftUp{
                 display: flex;
-                gap: 6rem;
+                gap: 5rem;
+                
 
-                .profileIcon{
-                    svg{
-                        width: 50px;
-                        height: 50px;
-                        color: #404040;
-                        margin-left: 15px;
+                .profileLeft{
+                    display: flex;
+                    gap: 8rem;
+                    margin-top: .8rem;
+    
+                    .profileIcon{
+                        svg{
+                            width: 50px;
+                            height: 50px;
+                            color: #404040;
+                            margin-left: 15px;
+                        }
+                        h2{
+                            font-size: 16px;
+                        }
                     }
-                    h2{
-                        font-size: 16px;
+                    .profileUseHead{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        margin-top: .5rem;
+                        h1{
+                            font-size: 16px;
+                            color: #808080;
+                        }
+                    }
+    
+                    .profileContent{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        margin-top: .5rem;
+                        h1{
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: #404040;
+                        }
                     }
                 }
-                .profileUseHead{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 3rem;
-                    margin-top: 2rem;
-                    h1{
-                        font-size: 16px;
+            }
+
+             .others{
+                    margin-top: 1rem;
+                    h6{
+                        font-size: 24px;
+                        font-weight: 500;
                         color: #808080;
                     }
-            }
-            }
 
-            .profileRight{
-                display: flex;
-                gap: 6rem;
-                .profileUseTail{
-                    display: flex;
-                    gap: 3rem;
-                    flex-direction: column;
-                    margin-top: 2rem;
-                    h1{
-                        font-size: 16px;
-                        color: #808080;
-                    }             
-                }
-                .userbtn{
-                    h1{
-                        font-size: 16px;
-                        color: #074028;
-                        cursor: pointer;
-                        background-color: transparent;
-                        border: 1px solid #074028;
-                        border-radius: 5px;
-                        padding: 5px;
+                    .othersdone{
+                        background-color:  rgba(200, 196, 196, 0.4);
+                        border-radius: 6px;
                     }
-                    :hover{
-                        background-color: #074028;
-                        color: #fefffe;
+                    .singleothers{
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 6rem;
+
+                        .single-left{
+                            display: flex;
+                            h2{
+                                font-size: 16px;
+                                font-weight: 700;
+                                color: #404040;
+                            }
+                            p{
+                                font-size: 16px;
+                                font-weight: 400;
+                                color: #404040;
+                            }
+                        }
                     }
                 }
+        }
+    }
+
+    .userbtn{
+        display: flex;
+        justify-content: space-between;
+        margin: 4rem 0;
+        .edit{
+            font-size: 16px;
+            color: #074028;
+            cursor: pointer;
+            background-color: transparent;
+            border: 1px solid #074028;
+            border-radius: 5px;
+            padding: 5px 25px;
+        }
+        
+        .newad{
+            font-size: 16px;
+            color: #fefffe;
+            cursor: pointer;
+            background-color: #074028;
+            border: 1px solid #074028;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        :hover{
+            background-color: transparent;
+            color: #074028;
+        }
+    }
+
+    .profileFoot{
+        background-color: #074028;
+        padding: 1px;
+    }
+
+    .profileUnder{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        
+        .profileUnderUp{
+            h1{
+                font-size: 24px;
+                font-weight: 700;
+                color: #404040;
+            }
+            p{
+                font-size: 16px;
+                font-weight: 400;
+                color: #404040;
             }
         }
+    }
+
+    .view{
+        background-color: transparent;
+        border: 1px solid #074028;
+        border-radius: 3px;
+        padding: .5rem 2rem;
+        margin-top: 2rem;
     }
 }

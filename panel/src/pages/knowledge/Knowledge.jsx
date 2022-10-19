@@ -13,7 +13,7 @@ const Knowledge = () => {
 
     useEffect(() => {
         const getKnowledgeData = async () => {
-            try {
+            try { 
                 const requestOptions = {
                     method: "GET",
                     url: `${baseurl()}/knowledge`,
@@ -68,7 +68,7 @@ const Knowledge = () => {
         <h1>Knowledge Hub</h1>
         <Link to='create'><button className="bg-transparent border-2 border-green-800 px-6 py-2 rounded-md text-green-800 font-bold text-sm ml-5 my-10">Add new crop</button></Link>
 
-        <div className="flex gap-3">
+        <div className="flex">
 
             {
                 status ?
@@ -76,7 +76,7 @@ const Knowledge = () => {
                             (knowledgeData.length > 0 ?
                                 knowledgeData.map((item, key) => {
                                     return <div className="w-52 h-60 rounded ml-6 overflow-hidden shadow-lg" key={key}>
-                                        <img className="w-full h-36" src={item.cropFile !== "" ? item.cropFile : "https://images.unsplash.com/photo-1530464684439-723262c0d16e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNyb3BzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"} alt="" />
+                                        <Link to='/contentdetails'><img className="w-full h-36" src={item.cropFile !== "" ? item.cropFile : "https://images.unsplash.com/photo-1530464684439-723262c0d16e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNyb3BzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"} alt="" /></Link>
                                         <div className="px-2 py-4">
                                             <div className="font-bold text-xl mb-1">{item.crop}</div>
                                         </div>

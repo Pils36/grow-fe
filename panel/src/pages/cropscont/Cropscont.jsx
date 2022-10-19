@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Sidebar from '../../components/sidebar/Sidebar'
 import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
@@ -65,6 +65,21 @@ const Cropscont = () => {
     }
 
 
+    const [images, setImages] = useState ([])
+    const [imageURLs, setImageURLs] = useState ([])
+
+    useEffect(() => {
+        if (images.length < 1) return
+        const newImageUrls = []
+        images.forEach(image => newImageUrls.push(URL.createObjectURL(image)))
+        setImageURLs(newImageUrls)
+    }, [images])
+
+    function onImageChange(e) {
+        setImages([...e.target.files])
+    }
+
+
   return ( 
     <div className='addCrops'>
         <div className="addcropsbar">
@@ -124,11 +139,11 @@ const Cropscont = () => {
                     <div className="thumbnail">
                         <h1>Add crop thumbnail</h1>
                         <div className="thumnailImage">
-                            <img src="https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg" alt="" />
-                            <h1>Select file from your computer folders</h1>
+                        <img src={`https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg`} alt="" />
+                            <input type="file" multiple accept='image/*' placeholder='Select file from your computer folders' onChange={onImageChange} />
                         </div>
                     </div>
-                </div>
+                </div> 
 
                 <div className='btnsb'>
                     <button className='cans' onClick={() => navigate('/knowledge')}>Cancel</button>

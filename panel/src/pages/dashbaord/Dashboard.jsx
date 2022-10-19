@@ -8,6 +8,7 @@ import Table from "../../components/table/Table"
 import { Link } from "react-router-dom";
 import axios from "axios";
 import baseurl from '../../constants/baseurl';
+import Lines from "../../components/charts/Lines";
 
 const Dashboard = () => {
 
@@ -21,20 +22,22 @@ const Dashboard = () => {
     const [status, setStatus] = useState(false)
     const [statusData, setStatusData] = useState(false)
 
-    const requestOptions = {
-        method: "GET",
-        url: `${baseurl()}/menu`,
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer " + localStorage.token
-        }
-    }
+   
 
     useEffect(() => {
         const fetchUsers = async () => {
             try {
+                 const requestOptions = {
+                     method: "GET",
+                     url: `${baseurl()}/menu`,
+                     headers: {
+                         "Content-Type": "application/json",
+                         "Authorization": "Bearer " + localStorage.token
+                     }
+                 }
+                 
                 const res = await axios(requestOptions)
-                setData(res.data.data)
+                setData(res.data.data);
                 setStatus(true);
             } catch (err) {
                 console.log(err);
@@ -57,7 +60,7 @@ const Dashboard = () => {
                 const result = await axios(config);
 
                 setUserData(result.data.data);
-                setStatusData(true);
+                setStatusData(true); 
                 
             } catch (err) {
                 console.log(err);
@@ -74,57 +77,60 @@ const Dashboard = () => {
 
 
             <div className="homeCOntainer">
-                <div className="homeUp">
-                    <Link to="/"><h1>Logout</h1></Link>
+                
+                <div className="home_up">
+                    <h1 className="dash">Dashboard</h1>
                     <Navbar />
-                    <div className="search">
-                        <input type="text" placeholder="Search by name" onChange={e => setQuery(e.target.value)} />
-                        <PersonSearchOutlinedIcon className="searchN" />
-                    </div>
                 </div>
 
-                <div className="homeDisplay">
-                    <h1>Dashboard</h1>
-                    {status ?
-                        <div key={data.user} className="homeDispalyDown">
-                            <div className="one">
-                                <h1>Total Users</h1>
-                                <h2>{data.user}</h2>
-                                <div className="status">
-                                    <p className="act">Active <span>:135</span></p>
-                                    <p className="in">Inactive <span>:15</span></p>
+                {
+                    status ? <>
+                        <div className="homeDisplay">
+                            <div key={data.user} className="homeDispalyDown">
+                                <div className="one">
+                                    <h1>Total Users</h1>
+                                    <h2>{data.user}</h2>
+                                    <div className="status">
+                                        <p className="act">Active <span>:{data.activeuser}</span></p>
+                                        <p className="in">Inactive <span>:{data.inactiveuser}</span></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="one">
-                                <h1>Total farms</h1>
-                                <h2>{data.farm}</h2>
-                                <div className="status">
-                                    <p className="act">Active <span>:215</span></p>
-                                    <p className="in">Inactive <span>:10</span></p>
+                                <div className="one">
+                                    <h1>Total farms</h1>
+                                    <h2>{data.farm}</h2>
+                                    <div className="status">
+                                        <p className="act">Active <span>:215</span></p>
+                                        <p className="in">Inactive <span>:10</span></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="three">
-                                <h1>Total crops</h1>
-                                <h2>{data.crops}</h2>
-                                <div className="status">
-                                    <p>Tubers <span>:3</span></p>
-                                    <p>Vegetable <span>:1</span></p>
+                                <div className="three">
+                                    <h1>Total crops</h1>
+                                    <h2>{data.crops}</h2>
+                                    <div className="status">
+                                        <p>Tubers <span>:3</span></p>
+                                        <p>Vegetable <span>:1</span></p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div> : 'loading...'
-                    }
-                </div>
-                {statusData ?
-                <>
-                        <div className="homeTableHead">
-                            <h1>User list</h1>
-                            <p>You have a total of {userData.length} users</p>
+
+                                <div className="three">
+                                    <h1>Total no of calls made</h1>
+                                    <h2 className="api">250</h2>
+                                </div>
+                            </div> 
                         </div>
-
-                        <Table data={search(userData)} />
-                </>
-                : <p>Loading...</p>
+                        <Lines data={
+                            {
+                                user: data.user,
+                                active: data.activeuser,
+                                inactive: data.inactiveuser
+                            }
+                        }
+                        />
+                    </>
+                        : 'loading...'
                 }
+
+                
             </div>
         </div>
     )

@@ -1,0 +1,111 @@
+.homeDisplayApi{
+    background-color: rgba(200, 196, 196, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 2rem;
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    border-radius: 4px;
+    padding: .5rem 1rem 1rem 2rem;
+    h1{ 
+        font-size: 24px;
+        color: #404040;
+    }
+
+    .homeDispalyDownApi{
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        .one{
+            height: 130px;
+            width: 210px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #FDFDFD;
+            border: 1px solid rgba(0, 0, 0, 0.45);
+            border-radius: 8px;
+            padding-left: .8rem;
+            h1{
+                font-size: 18px;
+                color: #404040;
+            }
+
+            h2{
+                font-size: 34px;
+                font-weight: 700;
+                color: #000000;
+            }
+
+
+            h3{
+                font-size: 34px;
+                font-weight: 700;
+                color: #FB0404;
+            }
+            .status{
+                display: flex;
+                gap: 1.5rem;
+                .act{
+                    font-size: 14px;
+                    color: #198208;
+                    span{
+                        color: #808080;
+                    }
+                }
+                .in{
+                    font-size: 14px;
+                    color: #FB0404;
+                    span{
+                        color: #808080;
+                    }
+                }
+            }
+        }
+        .three{
+            height: 130px;
+            width: 210px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #FDFDFD;
+            border: 1px solid rgba(0, 0, 0, 0.45);
+            border-radius: 8px;
+            padding-left: .8rem;
+            h1{
+                font-size: 18px;
+                color: #404040;
+            }
+            h2{
+                font-size: 34px;
+                font-weight: 700;
+                color: #000000;
+            }
+
+            h4{
+                font-size: 34px;
+                font-weight: 700;
+                color: #198208;
+            }
+
+            .api{
+                color: #FB0404;
+                font-size: 34px;
+                font-weight: 700;
+            }
+            .status{
+                display: flex;
+                gap: 2rem;
+                p{
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #404040;
+                    span{
+                        color: #808080;
+                    }
+                }
+            }
+        }
+    }
+}
